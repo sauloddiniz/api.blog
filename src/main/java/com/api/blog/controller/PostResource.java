@@ -25,7 +25,7 @@ public class PostResource {
 
 	@Autowired
 	private PostService service;
-
+	
 	@PostMapping("/salvar")
 	public ResponseEntity<Post> salvar(@RequestBody Post post) {
 		return new ResponseEntity<>(service.salvar(post), HttpStatus.CREATED);
